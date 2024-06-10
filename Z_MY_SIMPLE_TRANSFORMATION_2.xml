@@ -1,0 +1,16 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined">
+  <tt:root name="ROOT" type="?"/>
+  <tt:root name="PERSON" type="ddic:ZSPERSON"/>
+  <tt:root line-type="ddic:ZSPERSON" name="PERSONS"/>
+  <tt:template>
+    <PERSONS>
+      <tt:loop ref=".PERSONS">
+        <PERSON>
+          <NAME tt:value-ref="NAME"/>
+          <AGE tt:value-ref="AGE"/>
+        </PERSON>
+      </tt:loop>
+    </PERSONS>
+  </tt:template>
+</tt:transform>
